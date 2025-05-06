@@ -6,11 +6,14 @@ public class Cpf {
     private long num;
     private int firstDigitVerifier;
     private int secondDigitVerifier;
+    private boolean valid;
 
     public Cpf(long num) {
-        this.num = num;
         firstDigitVerifier = getOneDigit(num, 9);
         secondDigitVerifier = getOneDigit(num, 10);
+        this.setNum(num);
+
+       // valid = ValidationCpf(num);
     }
 
     public Cpf() {
@@ -66,5 +69,15 @@ public class Cpf {
 
     public void setNum(long num) {
         this.num = num;
+
+        this.valid = ValidationCpf(num);
+    }
+
+    public boolean isValid() {
+        return valid;
+    }
+
+    public void setValid(boolean v) {
+        valid = v;
     }
 }
