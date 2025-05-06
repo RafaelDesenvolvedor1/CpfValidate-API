@@ -12,8 +12,6 @@ public class Cpf {
         firstDigitVerifier = getOneDigit(num, 9);
         secondDigitVerifier = getOneDigit(num, 10);
         this.setNum(num);
-
-       // valid = ValidationCpf(num);
     }
 
     public Cpf() {
