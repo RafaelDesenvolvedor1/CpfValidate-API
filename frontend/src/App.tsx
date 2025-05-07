@@ -1,12 +1,15 @@
-import './App.css'
-import Main from './components/Main'
+import "./App.css";
+import Main from "./components/Main";
+import { AuthProvider } from "./contexts/auth";
 
 function App() {
   return (
-    <div>
-      <Main/>
-    </div>
-  )
+    <>
+      <AuthProvider>
+        <Main />
+      </AuthProvider>
+    </>
+  );
 }
 
-export default App
+export default App;

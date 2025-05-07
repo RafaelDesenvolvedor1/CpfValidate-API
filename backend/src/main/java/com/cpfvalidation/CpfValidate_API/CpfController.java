@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class CpfController {
 
     @GetMapping("/{num}")
-    public boolean validateCpf(@PathVariable long num) {
+    public Cpf validateCpf(@PathVariable long num) {
         Cpf cpf = new Cpf(num);
-        return cpf.isValid();
+        return cpf;
     }
     
 }
