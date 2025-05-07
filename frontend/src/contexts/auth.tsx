@@ -11,7 +11,7 @@ type AuthContextType = {
 }
 
 interface CpfResponse  {
-    valid: boolean;
+    validate: boolean;
 }
 
 export const AuthContext = createContext<AuthContextType | null>(null);
@@ -23,7 +23,7 @@ export function AuthProvider({children}:Props){
     async function getCpfValid(num:number): Promise<boolean | undefined> {
         try{
             const response = await api.get<CpfResponse>(`/${num}`, {});
-            return response.data.valid
+            return response.data.validate
         }catch(err){
             alert("erro")
             console.log(err)

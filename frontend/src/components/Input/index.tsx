@@ -4,6 +4,6 @@ type Props = React.InputHTMLAttributes<HTMLInputElement>;
 
 export default (props: Props) => {
     return(
-        <input {...props} />
+        <input {...props} className="form-control"/>
     )
 }

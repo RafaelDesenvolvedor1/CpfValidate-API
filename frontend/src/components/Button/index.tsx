@@ -5,7 +5,7 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement>
 export default (props: Props)=>{
 
     return(
-        <button {...props} type="button">
+        <button {...props} className="btn btn-secondary">
             {props.children}
         </button>
     )

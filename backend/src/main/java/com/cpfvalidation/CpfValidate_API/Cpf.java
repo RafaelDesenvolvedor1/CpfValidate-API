@@ -71,11 +71,11 @@ public class Cpf {
         this.validate = ValidationCpf(num);
     }
 
-    public boolean isValid() {
+    public boolean isValidate() {
         return validate;
     }
 
-    public void setValid(boolean v) {
+    public void setValidate(boolean v) {
         validate = v;
     }
 }
